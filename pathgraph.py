@@ -213,7 +213,7 @@ class VertexInfoLabels():
 
             position(font_id, pos_text[0], pos_text[1], 0)
             size(font_id, bpy.context.scene.vertex_info_props.labels_size)
-            draw(font_id, v.index if is_show_indexes else v[pg_place].decode('UTF-8'))
+            draw(font_id, str(v.index) if is_show_indexes else v[pg_place].decode('UTF-8'))
 
         return {'PASS_THROUGH'}
     
